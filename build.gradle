@@ -24,8 +24,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
-    // In-memory Database for development
-    runtimeOnly 'com.h2database:h2'
+    // MySQL Connector
+    runtimeOnly 'mysql:mysql-connector-java:8.0.33'
 
     // Lombok for reducing boilerplate code
     compileOnly 'org.projectlombok:lombok'
@@ -35,6 +35,10 @@ dependencies {
     implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
     runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+    // Google Gemini API Client
+    implementation 'com.google.cloud:google-cloud-vertexai:1.5.0'
+    implementation 'com.google.protobuf:protobuf-java-util:3.25.1'
 
     // Spring Boot Test Starter
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
